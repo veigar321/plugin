@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f7f2">
+    <meta name="description" content="给认真上班的你一点小小的鼓励。换一句暖心的话，看看下班倒计时，也记得照顾自己。">
+    <title>打工能量站 · 给今天的自己充个电</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f4ce69'/%3E%3Ccircle cx='32' cy='30' r='14' fill='%23fff7d6' stroke='%232b4236' stroke-width='3'/%3E%3Cpath d='M25 34q7 8 14 0' fill='none' stroke='%232b4236' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="/assets/workday.css">
+    <link rel="stylesheet" href="/assets/pet.css">
+    <script src="/assets/workday.js" defer></script>
+    <script src="/assets/salary-core.js" defer></script>
+    <script src="/assets/pet.js" defer></script>
+</head>
+<body>
+    <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+            <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+            <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></symbol>
+            <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+            <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+            <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+            <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+            <symbol id="i-edit" viewBox="0 0 24 24"><path d="m16 3 5 5-12 12-6 1 1-6L16 3Zm-3 3 5 5"/></symbol>
+            <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 3C8 2 3 7 5 14c1 4 6 6 10 3 4-3 5-8 5-14ZM3 21 15 9"/></symbol>
+            <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 9h12v6a6 6 0 0 1-12 0V9Zm12 1h2a3 3 0 0 1 0 6h-2M3 22h15M7 2v3m5-3v3"/></symbol>
+            <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+            <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+            <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+            <symbol id="workday-cat" viewBox="0 0 260 250">
+                <ellipse cx="130" cy="237" rx="78" ry="9" fill="#58724b" opacity=".13"/>
+                <path d="M77 204C18 214 18 159 44 166" fill="none" stroke="#9b6e43" stroke-width="28" stroke-linecap="round"/>
+                <path d="M77 204C18 214 18 159 44 166" fill="none" stroke="#eab16b" stroke-width="22" stroke-linecap="round"/>
+                <ellipse cx="130" cy="176" rx="57" ry="59" fill="#eab16b" stroke="#9b6e43" stroke-width="2.8"/>
+                <ellipse cx="130" cy="185" rx="34" ry="37" fill="#ffedc4"/>
+                <path d="M65 84 62 33Q63 22 78 32l23 19q29-11 57 0l23-19q15-12 16 1l-3 51q13 28-4 45-21 23-60 22-39 1-60-22Q53 111 65 84Z" fill="#efbc7a" stroke="#9b6e43" stroke-width="2.8" stroke-linejoin="round"/>
+                <path d="m73 39 3 27 19-11-22-16Zm113 0-3 27-18-11 21-16Z" fill="#da927a"/>
+                <path d="m117 50 2 14m11-16v17m12-15-2 14" stroke="#cb8b4d" stroke-width="5" stroke-linecap="round"/>
+                <ellipse cx="88" cy="116" rx="11" ry="7" fill="#e49b7d" opacity=".8"/><ellipse cx="172" cy="116" rx="11" ry="7" fill="#e49b7d" opacity=".8"/>
+                <g class="cat-eyes" fill="#554638"><ellipse cx="103" cy="100" rx="4" ry="6"/><ellipse cx="157" cy="100" rx="4" ry="6"/></g>
+                <path d="m125 111 5 5 5-5Z" fill="#a86b55"/>
+                <path d="M130 115v6m-12-1q6 9 12 0 6 9 12 0M77 109l-12-3m12 11-13 3m119-11 12-3m-12 11 13 3" fill="none" stroke="#8e6549" stroke-width="2" stroke-linecap="round"/>
+                <path d="M88 141q42 18 84 0v12q-42 19-84 0Z" fill="#8a9f76" stroke="#62794e" stroke-width="2"/>
+                <path d="m106 158 16 4-7 24-15-5 6-23Z" fill="#8a9f76" stroke="#62794e" stroke-width="2"/>
+                <ellipse cx="81" cy="191" rx="16" ry="25" fill="#efbc7a" stroke="#9b6e43" stroke-width="2.5" transform="rotate(-18 81 191)"/>
+                <ellipse cx="179" cy="191" rx="16" ry="25" fill="#efbc7a" stroke="#9b6e43" stroke-width="2.5" transform="rotate(18 179 191)"/>
+                <ellipse cx="79" cy="226" rx="19" ry="10" fill="#ffedc4" stroke="#9b6e43" stroke-width="2"/><ellipse cx="181" cy="226" rx="19" ry="10" fill="#ffedc4" stroke="#9b6e43" stroke-width="2"/>
+                <rect x="77" y="181" width="106" height="57" rx="8" fill="#718963" stroke="#4e6944" stroke-width="2.8"/>
+                <path d="m123 197 7 10 7-10m-16 12h18m-18 6h18m-9-8v15" fill="none" stroke="#f9f0d2" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M66 239h128" stroke="#4e6944" stroke-width="4" stroke-linecap="round"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header">
+        <a class="brand" href="/" aria-label="打工能量站首页">
+            <span class="brand-symbol"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></span>
+            <span>打工能量站<span class="brand-english">THE WORKDAY CLUB</span></span>
+        </a>
+        <nav class="header-nav" aria-label="主导航">
+            <a class="nav-link is-current" href="#encouragement">给自己加油</a>
+            <a class="nav-link" href="#little-things">今日小确幸</a>
+        </nav>
+        <div class="header-date"><span class="status-dot"></span><time id="today-date">今天也是新的一天</time></div>
+    </header>
+
+    <main id="main" class="page-shell">
+        <section class="intro" aria-labelledby="page-title">
+            <div>
+                <p class="eyebrow"><span class="tiny-star">✳</span> 给努力生活的你，一点能量</p>
+                <h1 id="page-title">有猫陪你，<span class="title-accent">上班也有盼头<span class="title-dot">。</span></span></h1>
+                <p class="intro-description">看看今天一点点增加的收获，也给认真生活的自己一点鼓励。</p>
+            </div>
+            <button id="breath-button" class="breath-trigger" type="button">
+                <span class="breath-mini" aria-hidden="true"><span></span></span>
+                <span>先深呼吸一下<small>给自己 24 秒的暂停</small></span>
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+        </section>
+
+        <div class="hero-grid">
+            <section id="encouragement" class="quote-card" aria-labelledby="quote-heading">
+                <div class="card-topline">
+                    <h2 id="quote-heading"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> 今日份精神充电</h2>
+                    <span class="small-label">A LITTLE PICK-ME-UP</span>
+                </div>
+                <div class="mood-picker" role="group" aria-label="现在的心情">
+                    <span class="mood-label">现在的你</span>
+                    <button type="button" data-mood="tired" class="mood-button is-active" aria-pressed="true"><span aria-hidden="true">☁</span> 有点累</button>
+                    <button type="button" data-mood="unmotivated" class="mood-button" aria-pressed="false"><span aria-hidden="true">◔</span> 没动力</button>
+                    <button type="button" data-mood="overwhelmed" class="mood-button" aria-pressed="false"><span aria-hidden="true">≈</span> 压力大</button>
+                    <button type="button" data-mood="good" class="mood-button" aria-pressed="false"><span aria-hidden="true">☀</span> 状态不错</button>
+                </div>
+                <div class="quote-content" aria-live="polite" aria-atomic="true">
+                    <span class="quote-mark" aria-hidden="true">“</span>
+                    <blockquote id="quote-text">电量低的时候，慢一点也没关系。你又不是永动机。</blockquote>
+                    <p id="quote-note">休息是为了照顾自己，不需要先证明你有多努力。</p>
+                    <div class="quote-companion"><svg class="companion-cat" aria-hidden="true"><use href="#workday-cat"/></svg><div><span class="companion-name">陪班小橘 <span aria-hidden="true">·</span> 已就位</span><p>钱在慢慢赚，日子也要慢慢过。</p><a class="companion-link" href="/pet" target="_blank" rel="noopener">打开宠物陪伴页 <span aria-hidden="true">↗</span></a></div></div>
+                </div>
+                <div class="quote-actions">
+                    <button id="encourage-button" class="button button-primary" type="button"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> 再给我一点能量<svg class="icon arrow" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                    <div class="secondary-actions">
+                        <button id="favorite-button" class="icon-button" type="button" aria-label="收藏这句鼓励" aria-pressed="false" title="收藏这句鼓励"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
+                        <button id="copy-button" class="icon-button" type="button" aria-label="复制这句鼓励" title="复制这句鼓励"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button>
+                    </div>
+                </div>
+                <div class="quote-footnote quote-history"><span>今日充电 <strong id="encourage-count">0</strong> 次</span><button id="saved-button" class="saved-button" type="button" aria-label="查看收藏的鼓励">收藏的温暖 <strong id="saved-count">0</strong> <span aria-hidden="true">↗</span></button></div>
+            </section>
+
+            <aside id="pay-card" class="salary-card" aria-labelledby="salary-title">
+                <div class="salary-header"><h2 id="salary-title"><span class="salary-logo" aria-hidden="true">¥</span>上班鼓励器</h2><button class="salary-settings" type="button" data-open-pay-settings>设置</button></div>
+                <div class="salary-datetime"><span data-pay="date">今天</span><time data-pay="clock">00:00:00</time></div>
+                <div class="salary-status-row"><strong data-pay="status">陪你上班中</strong><span data-pay="schedule">每日 7.5 小时 · 午休 1.5 小时</span></div>
+                <p class="salary-countdown" data-pay="countdown">小橘正在计算今天的时间……</p>
+                <p class="salary-caption">今日已赚 <span>估算</span></p>
+                <div class="salary-amount"><span class="currency">¥</span><strong data-pay="earned">0.0000</strong></div>
+                <p class="salary-rate">当前计薪速度 <strong>¥<span data-pay="rate">0.0000</span> / 秒</strong></p>
+                <div class="salary-progress-label"><span>今日工时进度 <span data-pay="progressText">0.0%</span></span><span data-pay="hours">已工作 0 / 7.5 小时</span></div>
+                <progress class="salary-progress" data-pay="progress" max="100" value="0" aria-label="今日有效工时进度"></progress>
+                <div class="salary-details"><div><span>时薪</span><strong data-pay="hourly">¥26.67</strong></div><div><span>排班满勤可得</span><strong data-pay="daily">¥200.00</strong></div></div>
+                <div class="salary-month"><div><span>本月累计估算</span><small>已过排班日按满勤补算</small></div><strong data-pay="month">¥0.00</strong></div>
+                <p class="salary-equivalents" data-pay="equivalents">一点一滴，也在靠近喜欢的生活。</p>
+                <p class="salary-disclaimer">按设置的日薪与有效工时估算，午休不计薪；不含请假、加班、税费。</p>
+            </aside>
+        </div>
+
+        <section id="little-things" class="little-things" aria-labelledby="little-things-title">
+            <div class="section-heading"><h2 id="little-things-title">让今天，再好一点点</h2><span>小事，也值得被认真对待 <span aria-hidden="true">↘</span></span></div>
+            <div class="utility-grid">
+                <article class="utility-card countdown-card">
+                    <div class="utility-heading"><h3><span class="mini-icon sage"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span> 下班有盼头</h3><button id="shift-edit" class="text-button" type="button" data-open-pay-settings aria-label="设置上下班时间"><svg class="icon" aria-hidden="true"><use href="#i-edit"/></svg> 设置</button></div>
+                    <p id="countdown-label" class="card-description">距离下班，还有</p>
+                    <div class="countdown" role="timer" aria-label="工作时间倒计时"><span><strong id="countdown-hours">00</strong><small>小时</small></span><b aria-hidden="true">:</b><span><strong id="countdown-minutes">00</strong><small>分钟</small></span><b aria-hidden="true">:</b><span><strong id="countdown-seconds">00</strong><small>秒</small></span></div>
+                    <progress id="work-progress" max="100" value="0" aria-label="今日工作时间进度"></progress>
+                    <div class="progress-caption"><span id="shift-range">09:00 — 18:00</span><span id="countdown-note">再忙，也别忘了休息</span></div>
+                </article>
+
+                <article class="utility-card care-card">
+                    <div class="utility-heading"><h3><span class="mini-icon butter"><svg class="icon" aria-hidden="true"><use href="#i-cup"/></svg></span> 照顾自己清单</h3><span id="task-count" class="task-count" aria-live="polite">0/3</span></div>
+                    <p class="card-description">工作之外，你也很重要。</p>
+                    <div class="task-list">
+                        <label class="task"><input type="checkbox" data-task="water"><span class="task-box" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span><span>喝一杯温水<small>让身体也充个电</small></span><span class="task-decoration" aria-hidden="true">↗</span></label>
+                        <label class="task"><input type="checkbox" data-task="stretch"><span class="task-box" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span><span>起身伸个懒腰<small>和椅子短暂告别</small></span><span class="task-decoration" aria-hidden="true">↗</span></label>
+                        <label class="task"><input type="checkbox" data-task="eyes"><span class="task-box" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span><span>看看窗外的远方<small>给眼睛放个小假</small></span><span class="task-decoration" aria-hidden="true">↗</span></label>
+                    </div>
+                </article>
+
+                <article class="utility-card kindness-card">
+                    <div class="utility-heading"><h3><span class="mini-icon peach"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span> 收集一点小确幸</h3><span class="note-pin" aria-hidden="true"></span></div>
+                    <p class="card-description">今天，有什么让你开心了一下？</p>
+                    <div class="note-paper"><p id="kindness-note">比如，路上的阳光刚刚好，<br>或是喝到了喜欢的那杯咖啡。</p><span class="note-flower" aria-hidden="true">✳</span></div>
+                    <button id="kindness-button" class="text-button note-button" type="button"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg><span id="kindness-button-label">记下今天的小美好</span></button>
+                </article>
+            </div>
+        </section>
+        <div class="closing-note"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><p>工作只是生活的一部分，<strong>你才是生活的主角。</strong></p></div>
+    </main>
+
+    <footer class="site-footer"><span>打工能量站 <span class="footer-separator">/</span> 为每一个认真生活的你</span><span>慢慢来，也会到达 <span aria-hidden="true">☀</span></span></footer>
+
+    <dialog id="pay-dialog" class="modal pay-modal" aria-labelledby="pay-title">
+        <button id="pay-close" class="icon-button modal-close" type="button" aria-label="关闭设置，不保存修改" title="关闭设置"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+        <form id="pay-form">
+            <p class="eyebrow">YOUR DAY, YOUR PACE</p><h2 id="pay-title">给努力设一个小目标</h2><p class="modal-description">小橘按有效工时估算收入。设置只保存在当前浏览器。</p>
+            <label class="pay-field">日薪（元）<input id="pay-daily" type="number" min="0" max="1000000" step="0.01" value="200" required inputmode="decimal"></label>
+            <div class="time-fields"><label>上班时间<input id="pay-start" type="time" step="1" value="09:00:00" required></label><span aria-hidden="true">—</span><label>下班时间<input id="pay-end" type="time" step="1" value="18:00:00" required></label></div>
+            <label class="pay-break-toggle"><input id="pay-break-enabled" type="checkbox" checked> 扣除午休时间</label>
+            <div class="time-fields pay-break-fields"><label>午休开始<input id="pay-break-start" type="time" step="1" value="12:00:00" required></label><span aria-hidden="true">—</span><label>午休结束<input id="pay-break-end" type="time" step="1" value="13:30:00" required></label></div>
+            <fieldset class="pay-workdays"><legend>每周工作日</legend><div><label><input type="checkbox" name="pay-workdays" value="1" checked><span>一</span></label><label><input type="checkbox" name="pay-workdays" value="2" checked><span>二</span></label><label><input type="checkbox" name="pay-workdays" value="3" checked><span>三</span></label><label><input type="checkbox" name="pay-workdays" value="4" checked><span>四</span></label><label><input type="checkbox" name="pay-workdays" value="5" checked><span>五</span></label><label><input type="checkbox" name="pay-workdays" value="6"><span>六</span></label><label><input type="checkbox" name="pay-workdays" value="0"><span>日</span></label></div></fieldset>
+            <p class="storage-note">时间支持时:分:秒，使用本机时间，暂不支持跨夜班次。本月金额按当前排班估算。</p><p id="pay-error" class="pay-error" role="alert"></p>
+            <div class="modal-actions"><button id="pay-cancel" class="button button-secondary" type="button">取消</button><button class="button button-primary" type="submit">保存，继续陪班</button></div>
+        </form>
+    </dialog>
+    <dialog id="kindness-dialog" class="modal" aria-labelledby="kindness-title">
+        <form id="kindness-form">
+            <p class="eyebrow">THE LITTLE GOOD THINGS</p><h2 id="kindness-title">把这一点美好留下来</h2><p class="modal-description">只属于今天的小记录，写什么都可以。</p>
+            <label class="note-input-label" for="kindness-input">今天的小确幸</label><textarea id="kindness-input" rows="4" maxlength="180" placeholder="今天让我开心的一件小事是……" required></textarea>
+            <p class="storage-note">记录仅保存在当前浏览器，最多 180 个字。</p>
+            <div class="modal-actions"><button id="kindness-clear" class="text-button clear-note" type="button">清空记录</button><button id="kindness-cancel" class="button button-secondary" type="button">取消</button><button class="button button-primary" type="submit">收好这份美好</button></div>
+        </form>
+    </dialog>
+    <dialog id="breath-dialog" class="modal breath-modal" aria-labelledby="breath-title">
+        <button id="breath-close" class="icon-button modal-close" type="button" aria-label="结束呼吸练习"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+        <p class="eyebrow">A MOMENT JUST FOR YOU</p><h2 id="breath-title">这一刻，只需要呼吸</h2>
+        <div class="breath-stage"><div id="breath-orb" class="breath-orb"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></div></div>
+        <p id="breath-label" class="breath-label" role="status">慢慢吸气</p><p class="modal-description">让肩膀放松，让自己歇一歇。</p>
+    </dialog>
+    <dialog id="saved-dialog" class="modal saved-modal" aria-labelledby="saved-title">
+        <button id="saved-close" class="icon-button modal-close" type="button" aria-label="关闭收藏列表"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+        <p class="eyebrow">POCKETS FULL OF SUNSHINE</p><h2 id="saved-title">收藏的温暖</h2><p class="modal-description">那些让你心里亮了一下的话，都在这里。</p>
+        <p id="saved-empty" class="saved-empty">还没有收藏。遇到喜欢的话，点一下爱心，把这份温暖留下来。</p>
+        <div id="saved-list" class="saved-list"></div>
+        <p class="storage-note">收藏仅保存在当前浏览器。</p>
+    </dialog>
+    <div class="pet-mode-toolbar"><a href="/">← 返回能量站</a><span>小橘陪班 · 拖动顶栏可移动</span></div>
+    <aside id="desktop-salary-card" class="desktop-salary-card" aria-label="上班鼓励器" hidden>
+        <header class="desktop-card-header">
+            <button id="desktop-card-drag" class="desktop-card-drag" type="button" aria-label="拖动上班鼓励器" title="按住这里拖动工资卡片">
+                <span class="desktop-card-logo" aria-hidden="true">¥</span><span class="desktop-card-title">上班鼓励器</span>
+            </button>
+            <div class="desktop-card-actions"><button class="desktop-card-settings" type="button" data-open-pay-settings>设置</button><button id="desktop-card-close" class="desktop-card-close" type="button" aria-label="退出上班鼓励器" title="退出应用"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+        </header>
+        <div class="desktop-card-datetime"><span data-pay="date">今天</span><time data-pay="clock">00:00:00</time></div>
+        <div class="desktop-card-status"><strong data-pay="status">上班中</strong><span data-pay="schedule">每日 7.5 小时 · 午休 1.5 小时</span></div>
+        <p class="desktop-card-countdown" data-pay="countdown">正在计算下班时间……</p>
+        <p class="desktop-card-earned-label">今日已赚 <span title="按设置的日薪与有效工时估算">估算</span></p>
+        <div id="desktop-income-row" class="desktop-income-row"><span class="desktop-income-currency" aria-hidden="true">¥</span><strong id="desktop-earned" role="img" aria-label="¥0.0000">0.0000</strong></div>
+        <p class="desktop-card-rate">当前赚钱速度 <strong>¥<span data-pay="rate">0.0000</span> / 秒</strong></p>
+        <div class="desktop-card-progress-label"><span>今日工时进度<span data-pay="progressText">0.0%</span></span><span data-pay="hours">已工作 0.00 / 7.50 小时</span></div>
+        <progress class="desktop-card-progress" data-pay="progress" max="100" value="0" aria-label="今日有效工时进度"></progress>
+        <div class="desktop-card-details"><div><span>时薪</span><strong data-pay="hourly">¥26.67</strong></div><div><span>今日满勤可得</span><strong data-pay="daily">¥200.00</strong></div></div>
+        <div class="desktop-card-month"><div><span>本月累计 <small>估算</small></span><p>已过的工作日按满勤补算</p></div><strong data-pay="month">¥0.00</strong></div>
+        <p class="desktop-card-equivalents" data-pay="equivalents">一点一滴，也在靠近喜欢的生活。</p>
+    </aside>
+    <aside id="pet-widget" class="pet-widget" aria-label="陪班小橘，实时工资与鼓励" data-state="working">
+        <div class="pet-toolbar"><button id="pet-drag-handle" class="pet-drag-handle" type="button" aria-label="拖动小橘，键盘方向键也可移动" title="拖动移动，方向键微调"><span aria-hidden="true">⠿</span> 陪班小橘 <span class="pet-online-dot" aria-hidden="true"></span></button><button id="pet-collapse" class="pet-tool" type="button" aria-expanded="true" aria-controls="pet-panel" aria-label="展开或收起宠物面板"><span id="pet-collapse-label">收起</span></button><button id="pet-hide" class="pet-tool pet-hide" type="button" aria-label="暂时隐藏小橘" title="暂时隐藏">×</button></div>
+        <div id="pet-panel" class="pet-panel" data-view="salary">
+            <div class="pet-panel-heading"><span>努力有回响</span><button class="text-button" type="button" data-open-pay-settings>设置</button></div>
+            <div class="pet-finance"><div class="pet-finance-status"><span data-pay="status">上班中</span><time data-pay="clock">00:00:00</time></div><p class="pet-pay-caption">今日已赚 · 估算</p><p class="pet-pay-amount">¥<strong data-pay="earned">0.0000</strong></p><p class="pet-pay-countdown" data-pay="countdown">正在计算……</p><progress class="salary-progress" data-pay="progress" max="100" value="0" aria-label="宠物面板有效工时进度"></progress><div class="pet-finance-details"><span>时薪 <strong data-pay="hourly">¥26.67</strong></span><span>满勤 <strong data-pay="daily">¥200.00</strong></span></div><div class="pet-month-row"><span>本月估算</span><strong data-pay="month">¥0.00</strong></div><p class="pet-estimate-note">已过排班日按满勤估算，午休不计薪。</p></div>
+            <div class="pet-quote-panel"><p class="pet-quote-mark" aria-hidden="true">“</p><p id="pet-quote">今天的你，已经很棒了。</p><p class="pet-quote-hint">点一下小橘，再听一句鼓励。</p><p class="pet-quote-money">今天已赚（估算） ¥<strong data-pay="earned">0.0000</strong></p></div>
+            <button id="pet-mode-toggle" class="pet-mode-toggle" type="button" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg><span id="pet-mode-label">听小橘说句话</span><span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="pet-mini-summary"><span>今天已赚 · 估算</span><strong>¥<span data-pay="earned">0.0000</span></strong><small data-pay="countdown">慢慢来，也会到达。</small></div>
+        <div class="pet-character"><span class="pet-rest-indicator" aria-hidden="true">z z Z</span><button id="pet-pat" class="pet-pat" type="button" aria-label="摸摸小橘，听一句鼓励" title="摸摸小橘，听一句鼓励"><svg class="pet-art" aria-hidden="true"><use href="#workday-cat"/></svg></button><span class="pet-character-caption">摸摸我，一起加油</span></div>
+    </aside>
+    <button id="pet-show" class="pet-launcher" type="button" hidden><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> 召唤小橘</button>
+    <div id="pet-toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <noscript><p class="noscript-message">开启 JavaScript 后，就能使用换句鼓励、下班倒计时和小确幸记录。</p></noscript>
+</body>
+</html>
